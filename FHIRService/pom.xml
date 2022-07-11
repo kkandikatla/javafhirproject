@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.fhirv1</groupId>
+  <artifactId>FHIRService</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>FHIRService</name>
+  
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <version>2.7.1</version>
+</parent>
+
+<dependencies>
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+<!-- To use apache camel spring features -->
+<dependency>
+	<groupId>org.apache.camel</groupId>
+	<artifactId>camel-spring</artifactId>
+	<version>3.17.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-core</artifactId>
+    <version>3.17.0</version>
+</dependency>
+
+<!-- To use apache camel fhir spring boot features-->
+<dependency>
+    <groupId>org.apache.camel.springboot</groupId>
+    <artifactId>camel-fhir-starter</artifactId>
+    <version>3.17.0</version>
+</dependency>
+
+
+<!-- To use jackson parser for json-->
+<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-jackson</artifactId>
+      <version>3.17.0</version>
+</dependency>
+
+<!-- To use hapi fhir features (json to fhir parsing)-->
+<dependency>
+    <groupId>ca.uhn.hapi.fhir</groupId>
+    <artifactId>hapi-fhir-server</artifactId>
+    <version>6.0.2</version>
+</dependency>
+
+<!-- To use HAPI FHIR R4 structures that contains resources and datatype definitions -->
+<dependency>
+    <groupId>ca.uhn.hapi.fhir</groupId>
+    <artifactId>hapi-fhir-structures-r4</artifactId>
+    <version>6.0.2</version>
+</dependency>
+
+<!-- To reduce boiler plate code in Model/POJO classes -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <scope>provided</scope>
+</dependency>
+
+</dependencies>
+
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-maven-plugin</artifactId>
+    </plugin>
+  </plugins>
+</build>
+</project>
